@@ -23,10 +23,6 @@
 				height: auto;
 				max-width: 100%;
 			}
-
-			p {
-				white-space: pre-wrap;
-			}
 		</style>
 	</head>
 
@@ -137,7 +133,7 @@
 
 			// Load list of adoptable dogs into the DOM
 			var dogList = document.querySelector('#dogs');
-			dogList.innerHTML = getDogs();
+			dogList.innerHTML = getSummary() + getDogs()
 
 		</script>
 	</body>

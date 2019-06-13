@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Immutability</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Styles -->
+		<style type="text/css">
+			body {
+				max-width: 40em;
+				width: 88%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
+	</head>
+
+	<body>
+
+
+		<script>
+			var lunch = {
+				sandwich: 'turkey',
+				chips: 'cape cod',
+				drink: 'soda'
+			};
+			var moreLunch = lunch;
+
+			// Remove "chips" from lunch
+			delete lunch.chips;
+			// console.log(moreLunch);
+
+			// Create an immutable copy of the original array
+			var evenMoreLunch = Object.assign({}, lunch);
+
+			// Add a snack
+			lunch.snack = 'cookies';
+
+			console.log(lunch);
+			console.log(evenMoreLunch);
+		</script>
+	</body>
+</html>
