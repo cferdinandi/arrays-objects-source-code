@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Array Destructuring</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			let lunch = ['turkey sandwich', 'soda', 'chips', 'cookie'];
+
+			// Traditional approach
+			// let entree = lunch[0];
+			// let drink = lunch[1];
+			// let side = lunch[2];
+			// let desert = lunch[3];
+
+			// Destructuring
+			let [entree, drink, side, desert] = lunch;
+
+			console.log(entree);
+			console.log(side);
+		</script>
+	</body>
+</html>

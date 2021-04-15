@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>for</title>
+		<title>Array.includes()</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
@@ -13,10 +13,11 @@
 		<script>
 			let sandwiches = ['turkey', 'tuna', 'ham', 'pb&j'];
 
-			for (let i = 0; i < sandwiches.length; i++) {
-				console.log(i); // index
-				console.log(sandwiches[i]); // value
-			}
+			let turkey = sandwiches.includes('turkey');
+			let grilledCheese = sandwiches.includes('grilled cheese');
+
+			console.log(turkey);
+			console.log(grilledCheese);
 		</script>
 	</body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Immutable Array</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			let sandwiches = ['turkey', 'tuna', 'ham', 'pb&j'];
+
+			// Create an immutable copy
+			let moreSandwiches = Array.from(sandwiches);
+			let evenMoreSandwiches = sandwiches.slice();
+
+			// Add a few sandwiches
+			sandwiches.push('italian', 'blt');
+
+			console.log(sandwiches);
+			console.log(moreSandwiches);
+			console.log(evenMoreSandwiches);
+		</script>
+	</body>
+</html>

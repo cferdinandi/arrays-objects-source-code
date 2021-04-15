@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Object Destructuring</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			let movies = {
+				disney: 'Moana',
+				pixar: 'Up',
+				dreamworks: 'How to Train Your Dragon',
+				nickelodeon: 'Wonder Park'
+			};
+
+			// Traditional approach
+			// let disney = movies.disney;
+			// let pixar = movies.pixar;
+			// let dreamworks = movies.dreamworks;
+			// let nickelodeon = movies.nickelodeon;
+
+			// console.log(pixar);
+			// console.log(nickelodeon);
+			// console.log(dreamworks);
+
+			// Destructuring approach
+			let {disney, pixar, nickelodeon: nick} = movies;
+
+			console.log(pixar);
+			console.log(nick);
+		</script>
+	</body>
+</html>

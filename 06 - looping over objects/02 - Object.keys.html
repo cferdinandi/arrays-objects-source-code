@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>delete</title>
+		<title>Object.keys()</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
@@ -17,9 +17,8 @@
 				drink: 'soda'
 			};
 
-			// Remove the chips key from the lunch object
-			delete lunch.chips;
-			console.log(lunch);
+			let keys = Object.keys(lunch);
+			console.log(keys);
 		</script>
 	</body>
 </html>

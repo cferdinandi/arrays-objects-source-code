@@ -5,23 +5,13 @@
 		<meta charset="utf-8">
 		<title>deepAssign()</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<!-- Styles -->
-		<style type="text/css">
-			body {
-				max-width: 40em;
-				width: 88%;
-				margin-left: auto;
-				margin-right: auto;
-			}
-		</style>
 	</head>
 
 	<body>
 
 
 		<script>
-			var object1 = {
+			let object1 = {
 				apple: 0,
 				banana: {
 					weight: 52,
@@ -30,14 +20,14 @@
 				cherry: 97
 			};
 
-			var object2 = {
+			let object2 = {
 				banana: {
 					price: 200
 				},
 				durian: 100
 			};
 
-			var object3 = {
+			let object3 = {
 				apple: 'yum',
 				pie: 3.214,
 				applePie: true
@@ -45,20 +35,20 @@
 
 			/*!
 			 * Deep merge two or more objects into the first.
-			 * (c) 2019 Chris Ferdinandi, MIT License, https://gomakethings.com
+			 * (c) 2021 Chris Ferdinandi, MIT License, https://gomakethings.com
 			 * @param   {Object} objects  The objects to merge together
 			 * @returns {Object}          Merged values of defaults and options
 			 */
-			var deepAssign = function () {
+			function deepAssign () {
 
 				// Make sure there are objects to merge
-				var len = arguments.length;
+				let len = arguments.length;
 				if (len < 1) return;
 				if (len < 2) return arguments[0];
 
 				// Merge all objects into first
-				for (var i = 1; i < len; i++) {
-					for (var key in arguments[i]) {
+				for (let i = 1; i < len; i++) {
+					for (let key in arguments[i]) {
 						// If it's an object, recursively merge
 						// Otherwise, push to key
 						if (Object.prototype.toString.call(arguments[i][key]) === '[object Object]') {
@@ -71,16 +61,15 @@
 
 				return arguments[0];
 
-			};
+			}
 
 			// Merge into the first
-			// var merged = deepAssign(object1, object2, object3);
-			// console.log(object1);
-			// console.log(merged);
+			let merged = deepAssign(object1, object2, object3);
+			console.log(merged);
 
 			// Create a new object
 			// Comment out the previous example first
-			var mergedNewObj = deepAssign({}, object1, object2, object3);
+			let mergedNewObj = deepAssign({}, object1, object2, object3);
 			console.log(object1);
 			console.log(mergedNewObj);
 		</script>

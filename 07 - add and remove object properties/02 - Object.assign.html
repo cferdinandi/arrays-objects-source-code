@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Object.assign()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			let object1 = {
+				apple: 0,
+				banana: {
+					weight: 52,
+					price: 100
+				},
+				cherry: 97
+			};
+
+			let object2 = {
+				banana: {
+					price: 200
+				},
+				durian: 100
+			};
+
+			let object3 = {
+				apple: 'yum',
+				pie: 3.214,
+				applePie: true
+			};
+
+			// Merge into the first
+			let merged = Object.assign(object1, object2, object3);
+
+			// Create a new object
+			// Comment out the previous example first
+			let mergedNewObj = Object.assign({}, object1, object2, object3);
+			console.log(mergedNewObj);
+		</script>
+	</body>
+</html>

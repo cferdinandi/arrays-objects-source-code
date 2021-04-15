@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>delete</title>
+		<title>Immutable Object</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
@@ -17,9 +17,14 @@
 				drink: 'soda'
 			};
 
-			// Remove the chips key from the lunch object
-			delete lunch.chips;
+			// Create an immutable copy
+			let moreLunch = Object.assign({}, lunch);
+
+			// Add a snack
+			lunch.snack = 'cookies';
+
 			console.log(lunch);
+			console.log(moreLunch);
 		</script>
 	</body>
 </html>

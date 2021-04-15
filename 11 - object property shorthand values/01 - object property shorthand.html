@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Object Property Shorthand</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			// Some details
+			let name = 'Merlin';
+			let job = 'wizard';
+			let age = 'old AF';
+
+			// The object
+			let wizard = {
+				name: name, // The old way
+				job,        // ES6 shorthand
+				age         // ES6 shorthand
+			};
+
+			console.log(wizard);
+		</script>
+	</body>
+</html>

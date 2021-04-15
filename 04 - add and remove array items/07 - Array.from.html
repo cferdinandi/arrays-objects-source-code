@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Array.from()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<style type="text/css">
+			body {
+				margin: 0 auto;
+				max-width: 40em;
+				width: 88%;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h1>Array.from()</h1>
+
+		<p>
+			<button>1</button>
+			<button>2</button>
+			<button>3</button>
+			<button>4</button>
+			<button>5</button>
+		</p>
+
+
+		<script>
+			let sandwiches = ['turkey', 'tuna', 'ham', 'pb&j'];
+			let sandwichesCopy = Array.from(sandwiches);
+			console.log(sandwichesCopy);
+
+			let btns = document.querySelectorAll('button');
+			let btnsArr = Array.from(btns, function (btn) {
+				return btn.textContent;
+			});
+			console.log(btnsArr);
+		</script>
+	</body>
+</html>

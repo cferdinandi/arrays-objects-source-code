@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Immutability and multidimensional arrays and objects</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			// A multidimensional array
+			let wizards = [{
+				name: 'Radagast',
+				color: 'brown'
+			}, {
+				name: 'Gandalf',
+				color: 'gray'
+			}];
+
+			// Create an immutable copy of the wizards array
+			let wizardsCopy = Array.from(wizards);
+
+			// Update a nested property
+			wizards[0].druid = true;
+
+			console.log(wizards[0]);
+			console.log(wizardsCopy[0]);
+		</script>
+	</body>
+</html>

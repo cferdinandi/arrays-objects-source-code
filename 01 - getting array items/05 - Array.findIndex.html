@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Array.findIndex()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			let sandwiches = [
+				{
+					name: 'turkey',
+					smelly: false
+				},
+				{
+					name: 'tuna',
+					smelly: true
+				},
+				{
+					name: 'pb&j',
+					smelly: false
+				}
+			];
+
+			// Find the index of the tuna sandwich
+			let tuna = sandwiches.findIndex(function (sandwich) {
+				return sandwich.name === 'tuna';
+			});
+
+			console.log(tuna);
+		</script>
+	</body>
+</html>

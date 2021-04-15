@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Immutability</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			// Original array and object
+			let sandwiches = ['turkey', 'tuna', 'ham', 'pb&j'];
+			let lunch = {
+				sandwich: 'turkey',
+				chips: 'cape cod',
+				drink: 'soda'
+			};
+
+			// These create references to the original
+			let moreSandwiches = sandwiches;
+			let moreLunch = lunch;
+
+			// Remove "tuna" from sandwiches
+			// Remove "chips" from lunch
+			sandwiches.splice(1, 1);
+			delete lunch.chips;
+
+			console.log(moreSandwiches);
+			console.log(moreLunch);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Combine and Copy</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			/**
+			 * Arrays
+			 */
+
+			// Some arrays
+			let sandwiches1 = ['tuna', 'turkey', 'pb&j'];
+			let sandwiches2 = ['chicken', 'pb&j'];
+
+			// Copy an array
+			// Works like Array.from(sandwiches)
+			let sandwichesCopy = [...sandwiches1];
+			console.log(sandwichesCopy);
+
+			// Combine two arrays
+			// Works like sandwiches1.concat(sandwiches2)
+			let moreSandwiches = [...sandwiches1, ...sandwiches2];
+			console.log(moreSandwiches);
+
+
+			/**
+			 * Objects
+			 */
+
+			// Some objects
+			let radagast1 = {
+				color: 'brown',
+				druid: true
+			};
+			let radagast2 = {
+				skills: 'Talks with animals',
+				druid: false
+			};
+
+			// Copy an object
+			// Works like Object.assign({}, radagst1);
+			let radagastCopy = {...radagast1};
+			console.log(radagastCopy);
+
+			// Combine two objects
+			// Works like Object.assign({}, radagast1, radagast2);
+			let moreRadagast = {...radagast1, ...radagast2};
+			console.log(moreRadagast);
+		</script>
+	</body>
+</html>

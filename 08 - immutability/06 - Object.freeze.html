@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Object.freeze()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			let wizard = {
+				name: 'Merlin',
+				age: 'old AF'
+			};
+
+			// Freeze the wizard object
+			Object.freeze(wizard);
+
+			// Try to make updates
+			// This will not work
+			wizard.age = 42;
+			wizard.wand = true;
+			delete wizard.name;
+
+			console.log(wizard);
+
+			// Create a copy to modify
+			let wizardClone = Object.assign({}, wizard);
+			wizardClone.age = 42;
+
+			console.log(wizardClone);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Object Function Shorthands</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			// Some details
+			let name = 'Merlin';
+			let job = 'wizard';
+			let age = 'old AF';
+
+			// The object
+			let wizard = {
+
+				// Values
+				name: name, // The old way
+				job,        // ES6 shorthand
+				age,        // ES6 shorthand
+
+				// The old way of adding functions
+				summon: function () {
+					console.log('From out of thin air, watch me make a bear');
+				},
+
+				// The ES6 shorthand way
+				vanish () {
+					console.log(`Now you see me, now you don't.`);
+				}
+
+			};
+
+			wizard.summon();
+			wizard.vanish();
+		</script>
+	</body>
+</html>

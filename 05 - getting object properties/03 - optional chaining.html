@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Optional Chaining</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			let wizard = {
+				name: 'Merlin',
+				spells: {
+					levitate: {
+						materials: ['moss', 'a pinch of salt'],
+						phrase: 'Levioso!'
+					},
+					summon: {
+						materials: ['diamond dust', 'a drop of water'],
+						phrase: 'Abracadabra!'
+					}
+				}
+			};
+
+			// Get a property that exists
+			let summon = wizard.spells.summon.phrase;
+			console.log(summon);
+
+			// throws an error
+			// let teacups = wizard.spells.teacup.phrase;
+			// console.log(teacups);
+
+			// Optionally get a property that exists
+			let summonOptional = wizard?.spells?.summon?.phrase;
+			console.log(summonOptional);
+
+			// Optionally get a property that DOESN'T exist
+			let teacupsOptional = wizard?.spells?.teacup?.phrase;
+			console.log(teacupsOptional);
+		</script>
+	</body>
+</html>
