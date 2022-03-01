@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Array.sort()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			//
+			// Simple Sorting
+			//
+
+			let wizards = ['Merlin', 42, 'Gandalf', 2022, 'Radagast'];
+
+			// Sort the wizard array
+			wizards.sort();
+			console.log(wizards);
+
+
+
+			//
+			// Complex Sorting
+			//
+
+			let trees = [
+				{
+					type: 'White pine',
+					pineCones: 4
+				},
+				{
+					type: 'Blue spruce',
+					pineCones: 3
+				},
+				{
+					type: 'Douglas fir',
+					pineCones: 7
+				}
+			];
+
+			trees.sort(function (tree1, tree2) {
+
+				// If the tree1 has more pine cones, put it before tree2
+				if (tree1.pineCones > tree2.pineCones) {
+					return -1;
+				}
+
+				// Otherwise, put tree2 before tree1
+				return 1;
+
+			});
+
+			console.log(trees);
+		</script>
+	</body>
+</html>
