@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Array.every()</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+
+		<script>
+			let wizards = [
+				{
+					name: 'Radagast',
+					spells: ['Talk to animals', 'Grow plants'],
+					tool: 'staff'
+				},
+				{
+					name: 'Merlin',
+					spells: ['Dancing teacups', 'Turn into fish'],
+					tool: 'wand'
+				},
+				{
+					name: 'Gandalf',
+					spells: ['You shall not pass', 'Disappear'],
+					tool: 'staff'
+				}
+			];
+
+			// Check every wizard uses a staff as their tool
+			let hasStaff = wizards.every(function (wizard) {
+				if (wizard.tool === 'staff') {
+					return true;
+				} else {
+					return false;
+				}
+			});
+
+			// Check if every wizard has at least one spell
+			let hasSpells = wizards.every(function (wizard) {
+				if (wizard.spells.length > 0) {
+					return true;
+				} else {
+					return false;
+				}
+			});
+
+			console.log(hasStaff);
+			console.log(hasSpells);
+		</script>
+	</body>
+</html>
